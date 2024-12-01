@@ -10,11 +10,11 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('hintergrund1.png'); /* Startbild */
+            background-image: url('hintergrund1.png');
             background-size: cover;
             background-position: center;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.8;
             transition: background-image 1s ease-in-out;
         }
         header {
@@ -32,23 +32,6 @@
         header p {
             font-size: 1.3em;
             color: #666;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffd700;
         }
         section {
             padding: 30px;
@@ -72,19 +55,19 @@
 <body>
     <header>
         <h1>Willkommen auf meiner Webseite!</h1>
-        <p>Einblicke in das Leben von Markus Ernst und seine Welt.</p>
+        <p>Einblicke in das Leben von Markus Ernst – ein Sigma-Mann und Christ.</p>
     </header>
     <main>
         <section id="ueber-mich">
             <h2>Über mich</h2>
-            <p>Markus Ernst ist ein vielseitig interessierter Mensch mit einer Leidenschaft für die Natur und Technik. Seine Welt ist geprägt von Kreativität und Empathie.</p>
-            <p>Er liebt es, neue Herausforderungen anzunehmen und Projekte umzusetzen, die einen positiven Einfluss auf seine Umgebung haben.</p>
-            <p>In seiner Freizeit genießt Markus es, draußen in der Natur zu sein, neue Orte zu entdecken und seine kreativen Ideen in die Realität umzusetzen.</p>
+            <p>Ich bin Markus Ernst – ein Mensch, der nicht nur alle guten Eigenschaften schätzt, sondern sie auch lebt. Im Laufe meines Lebens habe ich viele Tugenden gelernt, die mir geholfen haben, Herausforderungen zu meistern und mich als Individuum weiterzuentwickeln.</p>
+            <p>Als Sigma-Mann zeichne ich mich durch Unabhängigkeit, innere Stärke und einen festen Glauben an meine Prinzipien aus. Mein christlicher Glaube gibt mir Orientierung und Kraft, auch in schwierigen Zeiten stets das Richtige zu tun.</p>
+            <p>Ich bin leidenschaftlich, naturverbunden und neugierig auf alles, was das Leben zu bieten hat. Mein Ziel ist es, nicht nur für mich selbst, sondern auch für meine Mitmenschen ein positiver Einfluss zu sein.</p>
         </section>
 
         <section id="profil-video">
             <h2>Mein Profil</h2>
-            <video controls width="100%" height="auto" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <video autoplay loop muted playsinline width="100%" height="auto" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                 <source src="profil.mp4" type="video/mp4">
                 Ihr Browser unterstützt dieses Videoformat nicht.
             </video>
@@ -97,11 +80,21 @@
                 Willy-Brandt-Straße 11<br>
                 64354 Reinheim<br>
                 Email: <a href="mailto:markus.reinheim@googlemail.com">markus.reinheim@googlemail.com</a></p>
+            <p>Rechtliche Hinweise:<br>
+                Diese Webseite entspricht den Anforderungen des § 5 TMG (Telemediengesetz) sowie des § 55 RStV (Rundfunkstaatsvertrag). Alle Inhalte werden nach bestem Wissen und Gewissen bereitgestellt.</p>
         </section>
 
         <section id="datenschutz">
             <h2>Datenschutzerklärung</h2>
-            <p>Diese Webseite beachtet die Datenschutz-Grundverordnung (DSGVO). Es werden keine personenbezogenen Daten ohne Zustimmung gespeichert.</p>
+            <p>Diese Webseite beachtet die Datenschutz-Grundverordnung (DSGVO). Es werden keine personenbezogenen Daten ohne ausdrückliche Zustimmung verarbeitet oder gespeichert.</p>
+            <p>Ihre Rechte gemäß DSGVO:<br>
+                - Recht auf Auskunft gemäß Art. 15 DSGVO<br>
+                - Recht auf Berichtigung gemäß Art. 16 DSGVO<br>
+                - Recht auf Löschung gemäß Art. 17 DSGVO<br>
+                - Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO<br>
+                - Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO<br>
+                - Recht auf Widerspruch gemäß Art. 21 DSGVO<br>
+            </p>
             <p>Für weitere Informationen kontaktieren Sie uns per E-Mail: <a href="mailto:markus.reinheim@googlemail.com">markus.reinheim@googlemail.com</a>.</p>
         </section>
     </main>
@@ -130,63 +123,4 @@
     // Hintergrundbild alle 5 Sekunden ändern
     setInterval(changeBackground, 5000);
 </script>
-</html>
-<script>
-    // Array der Hintergrundbilder
-    const backgrounds = [
-        'hintergrund1.png',
-        'hintergrund2.png',
-        'hintergrund3.png',
-        'hintergrund4.png',
-        'hintergrund5.png',
-        'hintergrund6.png'
-    ];
-
-    let index = 0;
-
-    function changeBackground() {
-        document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
-        index = (index + 1) % backgrounds.length; // Zurück auf den ersten, wenn Ende erreicht
-    }
-
-    // Hintergrundbild alle 5 Sekunden ändern
-    setInterval(changeBackground, 5000);
-</script>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markus Ernst - Private Webseite</title>
-    <!-- CSS und andere Stile -->
-</head>
-<body>
-    <!-- Inhalte wie Header, Abschnitte und Footer -->
-    <footer>
-        <p>&copy; 2024 Markus Ernst - Alle Rechte vorbehalten.</p>
-    </footer>
-
-    <!-- Script für Hintergrundwechsel -->
-    <script>
-        // Array der Hintergrundbilder
-        const backgrounds = [
-            'hintergrund1.png',
-            'hintergrund2.png',
-            'hintergrund3.png',
-            'hintergrund4.png',
-            'hintergrund5.png',
-            'hintergrund6.png'
-        ];
-
-        let index = 0;
-
-        function changeBackground() {
-            document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
-            index = (index + 1) % backgrounds.length; // Zurück auf den ersten, wenn Ende erreicht
-        }
-
-        // Hintergrundbild alle 5 Sekunden ändern
-        setInterval(changeBackground, 5000);
-    </script>
-</body>
 </html>
