@@ -10,68 +10,62 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('hintergrund1.png'); /* Hintergrundbild */
+            background-image: url('hintergrund1.png'); /* Startbild */
             background-size: cover;
             background-position: center;
             color: #333;
             line-height: 1.6;
+            transition: background-image 1s ease-in-out;
         }
         header {
             text-align: center;
-            padding: 50px 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-bottom: 3px solid #ddd;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-bottom: 5px solid #ccc;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         header h1 {
-            margin: 20px 0 10px;
-            font-size: 2.5em;
+            margin: 20px 0;
+            font-size: 3em;
+            color: #444;
         }
         header p {
-            margin: 0;
-            font-size: 1.2em;
-            color: #555;
+            font-size: 1.3em;
+            color: #666;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #333;
-            padding: 10px;
+            background: #444;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1em;
+            margin: 0 20px;
+            font-size: 1.2em;
             transition: color 0.3s;
         }
         nav a:hover {
             color: #ffd700;
         }
         section {
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
             margin: 20px auto;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        section img {
-            float: left;
-            margin-right: 20px;
-            border-radius: 10px;
-            width: 150px;
-            height: auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
         footer {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: #333;
             color: #fff;
         }
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
@@ -80,26 +74,22 @@
         <h1>Willkommen auf meiner Webseite!</h1>
         <p>Einblicke in das Leben von Markus Ernst und seine Welt.</p>
     </header>
-    <nav>
-        <a href="#ueber-mich">Über mich</a>
-        <a href="#links">Links</a>
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
-    </nav>
     <main>
         <section id="ueber-mich">
             <h2>Über mich</h2>
             <p>Markus Ernst ist ein vielseitig interessierter Mensch mit einer Leidenschaft für die Natur und Technik. Seine Welt ist geprägt von Kreativität und Empathie.</p>
-            <img src="hintergrund2.png" alt="Naturbild">
-            <img src="hintergrund3.png" alt="Technologie">
+            <p>Er liebt es, neue Herausforderungen anzunehmen und Projekte umzusetzen, die einen positiven Einfluss auf seine Umgebung haben.</p>
+            <p>In seiner Freizeit genießt Markus es, draußen in der Natur zu sein, neue Orte zu entdecken und seine kreativen Ideen in die Realität umzusetzen.</p>
         </section>
-        <section id="links">
-            <h2>Wichtige Links</h2>
-            <ul>
-                <li><a href="https://drive.google.com/" target="_blank">Link 1</a></li>
-                <li><a href="https://example.com/" target="_blank">Link 2</a></li>
-            </ul>
+
+        <section id="profil-video">
+            <h2>Mein Profil</h2>
+            <video controls width="100%" height="auto" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <source src="profil.mp4" type="video/mp4">
+                Ihr Browser unterstützt dieses Videoformat nicht.
+            </video>
         </section>
+
         <section id="impressum">
             <h2>Impressum</h2>
             <p>Verantwortlich für den Inhalt:<br>
@@ -108,17 +98,17 @@
                 64354 Reinheim<br>
                 Email: <a href="mailto:markus.reinheim@googlemail.com">markus.reinheim@googlemail.com</a></p>
         </section>
+
         <section id="datenschutz">
             <h2>Datenschutzerklärung</h2>
             <p>Diese Webseite beachtet die Datenschutz-Grundverordnung (DSGVO). Es werden keine personenbezogenen Daten ohne Zustimmung gespeichert.</p>
-            <p>Für weitere Informationen: <a href="mailto:markus.reinheim@googlemail.com">Kontakt</a>.</p>
+            <p>Für weitere Informationen kontaktieren Sie uns per E-Mail: <a href="mailto:markus.reinheim@googlemail.com">markus.reinheim@googlemail.com</a>.</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Markus Ernst - Alle Rechte vorbehalten.</p>
     </footer>
 </body>
-</html>
 <script>
     // Array der Hintergrundbilder
     const backgrounds = [
@@ -140,14 +130,4 @@
     // Hintergrundbild alle 5 Sekunden ändern
     setInterval(changeBackground, 5000);
 </script>
-<section id="ueber-mich" style="background-image: url('hintergrund1.png');">
-    <h2>Über mich</h2>
-    <p>Markus Ernst ist ein vielseitig interessierter Mensch...</p>
-</section>
-
-<section id="links" style="background-image: url('hintergrund2.png');">
-    <h2>Wichtige Links</h2>
-    <ul>
-        <li><a href="https://example.com" target="_blank">Beispiel-Link</a></li>
-    </ul>
-</section>
+</html>
