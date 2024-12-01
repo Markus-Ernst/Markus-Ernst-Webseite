@@ -69,58 +69,9 @@
             color: #ffd700;
             text-decoration: none;
         }
-
-        /* Pop-up */
-        #popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        #popup img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
-        }
-
-        /* Animationen */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 <body>
-    <!-- Vorschaltfenster -->
-    <div id="popup">
-        <img src="bild1.png" alt="Vorderseite Bild" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);">
-    </div>
-
-    <!-- YouTube-Video -->
-    <div id="youtube-video" style="display: none; margin-top: 20px;">
-        <iframe id="video-frame" 
-                width="100%" 
-                height="600" 
-                src="https://www.youtube.com/embed/NPc8xOd9sIY?autoplay=1" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen>
-        </iframe>
-    </div>
-
     <header>
         <h1>Willkommen auf meiner Webseite!</h1>
         <p>Einblicke in das Leben von Markus Ernst und seine Welt – eine Plattform für Familie, Freunde und Inspiration.</p>
@@ -128,76 +79,73 @@
     <nav>
         <a href="#ueber-mich">Über mich</a>
         <a href="#videos">YouTube Videos</a>
+        <a href="#links">Links</a>
         <a href="#impressum">Impressum</a>
         <a href="#datenschutz">Datenschutz</a>
     </nav>
     <main>
         <section id="ueber-mich">
             <h2>Über mich</h2>
-            <p>Mein Name ist Markus Ernst, und ich bin vielseitig interessiert. Meine Leidenschaft gilt der Natur, der Technik und sozialen Projekten. Besonders faszinieren mich spirituelle Themen und deren Verbindung zur Familie.</p>
-            <p>In meiner Freizeit genieße ich Wanderungen in der Natur, kreatives Arbeiten und Lesen. Diese Webseite ist ein Ausdruck meiner Interessen und ein Ort, an dem ich meine Welt teilen kann.</p>
+            <p>
+                Mein Name ist Markus Ernst. Schon seit meiner Kindheit hat mich die Natur fasziniert. Ich liebe es, in den Wäldern zu wandern, die Ruhe der Berge zu genießen und die unendliche Weite der Landschaften auf mich wirken zu lassen. 
+                Diese Verbindung zur Natur hat mich auch dazu inspiriert, mehr über unsere Umwelt zu lernen und einen Beitrag zu ihrem Schutz zu leisten.
+            </p>
+            <p>
+                Neben meiner Leidenschaft für die Natur habe ich auch ein großes Interesse an Technik. Die Welt der Technologie bietet unendliche Möglichkeiten, die ich mit großer Neugier erforsche. 
+                Von der Entwicklung neuer Ideen bis hin zu ihrer praktischen Umsetzung: Technologie ist für mich nicht nur ein Werkzeug, sondern auch eine Quelle der Inspiration.
+            </p>
+            <p>
+                In meinem Leben spielt auch Spiritualität eine große Rolle. Ich bin fest davon überzeugt, dass es eine Verbindung zwischen uns allen gibt, die über das Materielle hinausgeht. 
+                Diese Webseite ist für mich eine Möglichkeit, meine Gedanken, Überzeugungen und Erfahrungen mit anderen zu teilen. Es ist ein Ort, an dem ich meine Welt präsentieren kann – ehrlich, authentisch und mit offenem Herzen.
+            </p>
+        </section>
+
+        <section id="videos">
+            <h2>YouTube Videos</h2>
+            <iframe width="100%" height="315" 
+                    src="https://www.youtube.com/embed/cTWDi1LQYKs" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+            </iframe>
+        </section>
+
+        <section id="links">
+            <h2>Wichtige Links</h2>
+            <ul>
+                <li><a href="https://youtu.be/cTWDi1LQYKs" target="_blank">Inspirierende Gedanken</a></li>
+                <li><a href="https://youtu.be/3nTEitl0CO8" target="_blank">Einblicke in die Natur</a></li>
+                <li><a href="https://youtu.be/Bg-UE0pA8GY" target="_blank">Spirituelle Reise</a></li>
+            </ul>
+        </section>
+
+        <section id="impressum">
+            <h2>Impressum</h2>
+            <p>
+                Verantwortlich für den Inhalt dieser Webseite:<br>
+                Markus Ernst<br>
+                Willy-Brandt-Straße 11<br>
+                64354 Reinheim<br>
+                <strong>Kontakt:</strong> <a href="mailto:markus.ernst493@gmail.com">markus.ernst493@gmail.com</a>
+            </p>
+            <p>
+                Diese Webseite dient ausschließlich privaten Zwecken und wird nicht kommerziell betrieben. Sollten Sie Fragen oder Anregungen haben, können Sie mich jederzeit kontaktieren.
+            </p>
+        </section>
+
+        <section id="datenschutz">
+            <h2>Datenschutzerklärung</h2>
+            <p>
+                Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Webseite speichert keine personenbezogenen Daten ohne Ihre Zustimmung.
+                Sollten Sie weitere Fragen zum Thema Datenschutz haben, können Sie mich unter folgender Adresse erreichen: <a href="mailto:markus.ernst493@gmail.com">markus.ernst493@gmail.com</a>.
+            </p>
+            <p>
+                Es gelten die Bestimmungen der Datenschutz-Grundverordnung (DSGVO). Für weitere Informationen können Sie mich jederzeit kontaktieren.
+            </p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Markus Ernst - Alle Rechte vorbehalten.</p>
     </footer>
-    <script>
-        // Pop-up anzeigen, dann nach 12 Sekunden ausblenden und Video starten
-        setTimeout(() => {
-            const popup = document.getElementById('popup'); // Pop-up Element
-            const video = document.getElementById('youtube-video'); // Video Element
-
-            if (popup) {
-                popup.style.display = 'none'; // Pop-up ausblenden
-            }
-
-            if (video) {
-                video.style.display = 'block'; // Video anzeigen
-            }
-        }, 12000);
-
-        // Hintergrundbilder für die Diashow
-        const backgrounds = [
-            'hintergrund1.png',
-            'hintergrund2.png',
-            'hintergrund3.png',
-            'hintergrund4.png',
-            'hintergrund5.png',
-            'hintergrund6.png'
-        ];
-
-        let index = 0;
-
-        function changeBackground() {
-            document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
-            document.body.style.backgroundSize = 'contain'; /* Hintergrund proportional kleiner */
-            document.body.style.backgroundPosition = 'center';
-            document.body.style.backgroundRepeat = 'no-repeat';
-            index = (index + 1) % backgrounds.length;
-        }
-
-        // Hintergrundbild alle 5 Sekunden ändern
-        setInterval(changeBackground, 5000);
-    </script>
 </body>
 </html>
-<!-- Bereich für Links -->
-<section id="zusatz-links">
-    <h2>Zusätzliche Videos</h2>
-    <ul>
-        <li><a href="https://youtu.be/cTWDi1LQYKs" target="_blank">Video 1: Inspirierende Gedanken</a></li>
-        <li><a href="https://youtu.be/3nTEitl0CO8" target="_blank">Video 2: Einblicke in die Natur</a></li>
-        <li><a href="https://youtu.be/Bg-UE0pA8GY" target="_blank">Video 3: Spirituelle Reise</a></li>
-    </ul>
-</section>
-
-<!-- Automatisches Abspielen des letzten Videos -->
-<section id="autoplay-video">
-    <h2>Automatisch startendes Video</h2>
-    <iframe width="100%" height="600" 
-            src="https://www.youtube.com/embed/Bg-UE0pA8GY?autoplay=1" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-    </iframe>
-</section>
