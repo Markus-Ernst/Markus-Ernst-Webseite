@@ -71,7 +71,64 @@
         }
     </style>
 </head>
+<script>
+    // Hintergrundbilder für die Diashow
+    const backgrounds = [
+        'hintergrund1.png',
+        'hintergrund2.png',
+        'hintergrund3.png',
+        'hintergrund4.png',
+        'hintergrund5.png',
+        'hintergrund6.png'
+    ];
+
+    let index = 0;
+
+    function changeBackground() {
+        document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+        document.body.style.backgroundSize = 'contain'; /* Hintergrund proportional anzeigen */
+        document.body.style.backgroundPosition = 'center'; /* Zentriert */
+        document.body.style.backgroundRepeat = 'no-repeat'; /* Keine Wiederholung */
+        index = (index + 1) % backgrounds.length; // Nächstes Bild oder zurück zum Anfang
+    }
+
+    // Hintergrundbild alle 5 Sekunden ändern
+    setInterval(changeBackground, 5000);
+</script>
 <body>
+    <!-- Pop-up-Fenster -->
+    <div id="popup">
+        <!-- ... (wie oben) ... -->
+    </div>
+
+    <!-- ... Ihr bestehender Seiteninhalt ... -->
+
+    <!-- JavaScript für Pop-up und Diashow -->
+    <script>
+        // Pop-up nach 12 Sekunden ausblenden
+        // ... (wie oben) ...
+    </script>
+    <script>
+        // Hintergrund-Diashow
+        // ... (wie oben) ...
+    </script>
+</body>
+<body>
+ <head>
+    <!-- ... Ihr bestehender Code ... -->
+    <style>
+        /* ... Ihr bestehendes CSS ... */
+
+        /* Pop-up-Stil */
+        #popup {
+            /* ... (wie oben) ... */
+        }
+        #popup img {
+            /* ... (wie oben) ... */
+        }
+    </style>
+</head>
+   
     <header>
         <h1>Willkommen auf meiner Webseite!</h1>
         <p>Einblicke in das Leben von Markus Ernst und seine Welt – eine Plattform für Familie, Freunde und Inspiration.</p>
