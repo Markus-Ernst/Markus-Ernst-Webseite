@@ -119,3 +119,35 @@
     </footer>
 </body>
 </html>
+<script>
+    // Array der Hintergrundbilder
+    const backgrounds = [
+        'hintergrund1.png',
+        'hintergrund2.png',
+        'hintergrund3.png',
+        'hintergrund4.png',
+        'hintergrund5.png',
+        'hintergrund6.png'
+    ];
+
+    let index = 0;
+
+    function changeBackground() {
+        document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+        index = (index + 1) % backgrounds.length; // Zurück auf den ersten, wenn Ende erreicht
+    }
+
+    // Hintergrundbild alle 5 Sekunden ändern
+    setInterval(changeBackground, 5000);
+</script>
+<section id="ueber-mich" style="background-image: url('hintergrund1.png');">
+    <h2>Über mich</h2>
+    <p>Markus Ernst ist ein vielseitig interessierter Mensch...</p>
+</section>
+
+<section id="links" style="background-image: url('hintergrund2.png');">
+    <h2>Wichtige Links</h2>
+    <ul>
+        <li><a href="https://example.com" target="_blank">Beispiel-Link</a></li>
+    </ul>
+</section>
