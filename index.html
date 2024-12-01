@@ -1,7 +1,8 @@
-# Anpassung des HTML-Codes, um die Hintergrundbilder proportional zu belassen:
-# Die Hintergrundbilder werden jetzt ohne extreme Vergrößerung angezeigt (contain statt cover).
+# Anpassung des HTML-Codes basierend auf den neuen Anforderungen:
+# 1. Entferne das untere Video-Fenster.
+# 2. Passe die Hintergrundbilder an, um die Vergrößerung proportional zu halten.
 
-final_html_with_correct_background = """
+adjusted_html_code = """
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -126,22 +127,12 @@ final_html_with_correct_background = """
     </div>
 
     <header>
-        <!-- Beide zusätzlichen YouTube-Videos -->
+        <!-- Ein einziges YouTube-Video -->
         <div>
             <iframe id="diashow-video-1" 
                     width="100%" 
                     height="315" 
                     src="https://www.youtube.com/embed/Eob6BcRxB1E?autoplay=1&loop=1&playlist=Eob6BcRxB1E" 
-                    frameborder="0" 
-                    allow="autoplay; encrypted-media" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-        <div style="margin-top: 20px;">
-            <iframe id="diashow-video-2" 
-                    width="100%" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/NPc8xOd9sIY?autoplay=1&loop=1&playlist=NPc8xOd9sIY" 
                     frameborder="0" 
                     allow="autoplay; encrypted-media" 
                     allowfullscreen>
@@ -205,9 +196,9 @@ final_html_with_correct_background = """
 </html>
 """
 
-file_path_correct_background = "/mnt/data/monika_ernst_proportional_background.html"
+file_path_adjusted = "/mnt/data/monika_ernst_adjusted_final.html"
 
-with open(file_path_correct_background, "w") as file:
-    file.write(final_html_with_correct_background)
+with open(file_path_adjusted, "w") as file:
+    file.write(adjusted_html_code)
 
-file_path_correct_background
+file_path_adjusted
