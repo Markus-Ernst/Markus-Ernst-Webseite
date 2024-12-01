@@ -152,3 +152,41 @@
     // Hintergrundbild alle 5 Sekunden ändern
     setInterval(changeBackground, 5000);
 </script>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markus Ernst - Private Webseite</title>
+    <!-- CSS und andere Stile -->
+</head>
+<body>
+    <!-- Inhalte wie Header, Abschnitte und Footer -->
+    <footer>
+        <p>&copy; 2024 Markus Ernst - Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <!-- Script für Hintergrundwechsel -->
+    <script>
+        // Array der Hintergrundbilder
+        const backgrounds = [
+            'hintergrund1.png',
+            'hintergrund2.png',
+            'hintergrund3.png',
+            'hintergrund4.png',
+            'hintergrund5.png',
+            'hintergrund6.png'
+        ];
+
+        let index = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+            index = (index + 1) % backgrounds.length; // Zurück auf den ersten, wenn Ende erreicht
+        }
+
+        // Hintergrundbild alle 5 Sekunden ändern
+        setInterval(changeBackground, 5000);
+    </script>
+</body>
+</html>
