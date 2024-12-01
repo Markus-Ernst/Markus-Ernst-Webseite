@@ -265,3 +265,58 @@
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 </script>
+<!-- Pop-up mit Bild bleibt erhalten -->
+<div id="popup">
+    <img src="bild1.png" alt="Vorderseite Bild" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);">
+</div>
+
+<!-- YouTube-Video wird nach Pop-up angezeigt -->
+<div id="youtube-video" style="display: none; margin-top: 20px;">
+    <iframe id="video-frame" 
+            width="100%" 
+            height="600" 
+            src="https://www.youtube.com/embed/NPc8xOd9sIY?autoplay=1" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+    </iframe>
+</div>
+<script>
+    // Hintergrundbilder für die Diashow
+    const backgrounds = [
+        'hintergrund1.png',
+        'hintergrund2.png',
+        'hintergrund3.png',
+        'hintergrund4.png',
+        'hintergrund5.png',
+        'hintergrund6.png'
+    ];
+
+    let index = 0;
+
+    function changeBackground() {
+        document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+        document.body.style.backgroundSize = 'contain'; /* Hintergrund proportional anpassen */
+        document.body.style.backgroundPosition = 'center'; /* Zentriert */
+        document.body.style.backgroundRepeat = 'no-repeat';
+        index = (index + 1) % backgrounds.length;
+    }
+
+    // Hintergrundbild alle 5 Sekunden ändern
+    setInterval(changeBackground, 5000);
+</script>
+<script>
+    // Pop-up anzeigen, dann nach 12 Sekunden ausblenden und Video starten
+    setTimeout(() => {
+        const popup = document.getElementById('popup'); // Pop-up Element
+        const video = document.getElementById('youtube-video'); // Video Element
+
+        if (popup) {
+            popup.style.display = 'none'; // Pop-up ausblenden
+        }
+
+        if (video) {
+            video.style.display = 'block'; // Video anzeigen
+        }
+    }, 12000);
+</script>
