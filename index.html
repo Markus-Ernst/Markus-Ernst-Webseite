@@ -333,3 +333,29 @@ document.getElementById("auserwaehlter"); // Nur einmal verwenden!
     <h2>Bin ich ein Auserwählter?</h2>
     <p>Hier erfahren Sie mehr über die Bedeutung und Möglichkeiten, ein Auserwählter zu sein.</p>
 </section>
+<!-- YouTube-Video wird am Schluss angezeigt -->
+<div id="youtube-video" style="display: none; margin-top: 20px;">
+    <iframe id="video-frame" 
+            width="100%" 
+            height="600" 
+            src="https://www.youtube.com/embed/NPc8xOd9sIY?autoplay=1" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+    </iframe>
+</div>
+<script>
+    // Pop-up anzeigen, dann nach 12 Sekunden ausblenden und EIN Video anzeigen
+    setTimeout(() => {
+        const popup = document.getElementById('popup'); // Pop-up Element
+        const video = document.getElementById('youtube-video'); // Video Element
+
+        if (popup) {
+            popup.style.display = 'none'; // Pop-up ausblenden
+        }
+
+        if (video) {
+            video.style.display = 'block'; // Video anzeigen
+        }
+    }, 12000);
+</script>
