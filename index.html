@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markus Ernst - Private Webseite</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>
+    <style>#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+#popup img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+}
+
         body {
+          <img src="images/bild1.png" alt="Vorderseite Bild"> 
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -112,8 +131,20 @@
         // Hintergrund-Diashow
         // ... (wie oben) ...
     </script>
+<script>
+    // Pop-up nach 12 Sekunden ausblenden
+    setTimeout(() => {
+        const popup = document.getElementById('popup');
+        if (popup) {
+            popup.style.display = 'none'; // Pop-up ausblenden
+        }
+    }, 12000);
+</script>
 </body>
-<body>
+<body><div id="popup">
+    <img src="bild1.png" alt="Vorderseite Bild" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);">
+</div>
+
  <head>
     <!-- ... Ihr bestehender Code ... -->
     <style>
