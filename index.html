@@ -114,6 +114,18 @@
     // Hintergrundbild alle 5 Sekunden ändern
     setInterval(changeBackground, 5000);
 </script>
+<script>
+    // Pop-up nach 9 Sekunden ausblenden
+    setTimeout(() => {
+        const popup = document.getElementById('popup'); // Pop-up-Element finden
+        if (popup) {
+            popup.style.display = 'none'; // Pop-up ausblenden
+        }
+    }, 9000); // Zeit in Millisekunden (9000 ms = 9 Sekunden)
+</script>
+<div id="popup">
+    <img src="bild1.png" alt="Vorderseite Bild">
+</div>
 <body>
     <!-- Pop-up-Fenster -->
     <div id="popup">
