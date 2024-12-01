@@ -5,55 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markus Ernst - Private Webseite</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <style>#popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-#popup img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
-}
+    <style>
+        /* Pop-up-Stile */
+        #popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        #popup img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+        }
 
         body {
-          <img src="images/bild1.png" alt="Vorderseite Bild"> 
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-size: contain; /* Hintergrund proportional anzeigen */
+            background-size: contain;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
             color: #333;
             line-height: 1.8;
-            transition: background-image 1s ease-in-out;<script>
-    // Pop-up nach 9 Sekunden ausblenden
-    setTimeout(() => {
-        const popup = document.getElementById('popup'); // Pop-up-Element finden
-        if (popup) {
-            popup.style.display = 'none'; // Pop-up ausblenden
+            transition: background-image 1s ease-in-out;
         }
-    }, 9000); // Zeit in Millisekunden (9000 ms = 9 Sekunden)
-<script>
-    // Pop-up nach 9 Sekunden ausblenden
-    setTimeout(() => {
-        const popup = document.getElementById('popup'); // Pop-up-Element finden
-        if (popup) {
-            popup.style.display = 'none'; // Pop-up ausblenden
-        }
-    }, 9000); // Zeit in Millisekunden (9000 ms = 9 Sekunden)
-</script>
 
-        }
         header {
             text-align: center;
             padding: 60px 20px;
@@ -61,208 +46,119 @@
             border-bottom: 5px solid #ddd;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         header h1 {
             margin: 20px 0;
             font-size: 3em;
             color: #444;
         }
+
         header p {
             font-size: 1.3em;
             color: #666;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #333;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #ffd700;
-        }
+
         section {
             padding: 30px;
-            background: rgba(255, 255, 255, 0.7); /* Transparente Textflächen */
+            background: rgba(255, 255, 255, 0.7);
             margin: 20px auto;
             max-width: 900px;
             border-radius: 12px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
+
         footer {
             text-align: center;
             padding: 20px;
             background: #333;
             color: #fff;
         }
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-        }
     </style>
 </head>
-<script>
-    // Hintergrundbilder für die Diashow
-    const backgrounds = [
-        'hintergrund1.png',
-        'hintergrund2.png',
-        'hintergrund3.png',
-        'hintergrund4.png',
-        'hintergrund5.png',
-        'hintergrund6.png'
-    ];
-
-    let index = 0;
-
-    function changeBackground() {
-        document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
-        document.body.style.backgroundSize = 'contain'; /* Hintergrund proportional anzeigen */
-        document.body.style.backgroundPosition = 'center'; /* Zentriert */
-        document.body.style.backgroundRepeat = 'no-repeat'; /* Keine Wiederholung */
-        index = (index + 1) % backgrounds.length; // Nächstes Bild oder zurück zum Anfang
-    }
-
-    // Hintergrundbild alle 5 Sekunden ändern
-    setInterval(changeBackground, 5000);
-</script>
-<script>
-    // Pop-up nach 9 Sekunden ausblenden
-    setTimeout(() => {
-        const popup = document.getElementById('popup'); // Pop-up-Element finden
-        if (popup) {
-            popup.style.display = 'none'; // Pop-up ausblenden
-        }
-    }, 9000); // Zeit in Millisekunden (9000 ms = 9 Sekunden)
-</script>
-<div id="popup">
-    <img src="bild1.png" alt="Vorderseite Bild">
-</div>
 <body>
     <!-- Pop-up-Fenster -->
     <div id="popup">
-        <!-- ... (wie oben) ... -->
+        <img src="bild1.png" alt="Vorderseite Bild">
     </div>
 
-    <!-- ... Ihr bestehender Seiteninhalt ... -->
-
-    <!-- JavaScript für Pop-up und Diashow -->
-    <script>
-        // Pop-up nach 12 Sekunden ausblenden
-        // ... (wie oben) ...
-    </script>
-    <script>
-        // Hintergrund-Diashow
-        // ... (wie oben) ...
-    </script>
-<script>
-    // Pop-up nach 12 Sekunden ausblenden
-    setTimeout(() => {
-        const popup = document.getElementById('popup');
-        if (popup) {
-            popup.style.display = 'none'; // Pop-up ausblenden
-        }
-    }, 12000);
-</script>
-</body>
-<body><div id="popup">
-    <img src="bild1.png" alt="Vorderseite Bild" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);">
-</div>
-
- <head>
-    <!-- ... Ihr bestehender Code ... -->
-    <style>
-        /* ... Ihr bestehendes CSS ... */
-
-        /* Pop-up-Stil */
-        #popup {
-            /* ... (wie oben) ... */
-        }
-        #popup img {
-            /* ... (wie oben) ... */
-        }
-    </style>
-</head>
-   
+    <!-- Hauptinhalt -->
     <header>
         <h1>Willkommen auf meiner Webseite!</h1>
-        <p>Einblicke in das Leben von Markus Ernst und seine Welt – eine Plattform für Familie, Freunde und Inspiration.</p>
+        <p>Einblicke in das Leben von Markus Ernst und seine Welt.</p>
     </header>
-    <nav>
-        <a href="#ueber-mich">Über mich</a>
-        <a href="#videos">YouTube Videos</a>
-        <a href="#links">Links</a>
-        <a href="#impressum">Impressum</a>
-        <a href="#datenschutz">Datenschutz</a>
-    </nav>
-    <main>
-        <section id="ueber-mich">
-            <h2>Über mich</h2>
-            <p>
-                Mein Name ist Markus Ernst. Schon seit meiner Kindheit hat mich die Natur fasziniert. Ich liebe es, in den Wäldern zu wandern, die Ruhe der Berge zu genießen und die unendliche Weite der Landschaften auf mich wirken zu lassen. 
-                Diese Verbindung zur Natur hat mich auch dazu inspiriert, mehr über unsere Umwelt zu lernen und einen Beitrag zu ihrem Schutz zu leisten.
-            </p>
-            <p>
-                Neben meiner Leidenschaft für die Natur habe ich auch ein großes Interesse an Technik. Die Welt der Technologie bietet unendliche Möglichkeiten, die ich mit großer Neugier erforsche. 
-                Von der Entwicklung neuer Ideen bis hin zu ihrer praktischen Umsetzung: Technologie ist für mich nicht nur ein Werkzeug, sondern auch eine Quelle der Inspiration.
-            </p>
-            <p>
-                In meinem Leben spielt auch Spiritualität eine große Rolle. Ich bin fest davon überzeugt, dass es eine Verbindung zwischen uns allen gibt, die über das Materielle hinausgeht. 
-                Diese Webseite ist für mich eine Möglichkeit, meine Gedanken, Überzeugungen und Erfahrungen mit anderen zu teilen. Es ist ein Ort, an dem ich meine Welt präsentieren kann – ehrlich, authentisch und mit offenem Herzen.
-            </p>
-        </section>
 
+    <main>
         <section id="videos">
             <h2>YouTube Videos</h2>
-            <iframe width="100%" height="315" 
-                    src="https://www.youtube.com/embed/cTWDi1LQYKs" 
-                    frameborder="0" 
-                    allow="autoplay; encrypted-media" 
-                    allowfullscreen>
-            </iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/cTWDi1LQYKs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/3nTEitl0CO8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Bg-UE0pA8GY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </section>
 
-        <section id="links">
-            <h2>Wichtige Links</h2>
-            <ul>
-                <li><a href="https://youtu.be/cTWDi1LQYKs" target="_blank">Inspirierende Gedanken</a></li>
-                <li><a href="https://youtu.be/3nTEitl0CO8" target="_blank">Einblicke in die Natur</a></li>
-                <li><a href="https://youtu.be/Bg-UE0pA8GY" target="_blank">Spirituelle Reise</a></li>
-            </ul>
+        <section id="diashows">
+            <h2>Diashows</h2>
+            <img src="diashow1.gif" alt="Diashow 1" style="width: 100%; max-height: 400px;">
+            <img src="diashow2.gif" alt="Diashow 2" style="width: 100%; max-height: 400px;">
+            <video width="100%" controls autoplay loop>
+                <source src="diashow3.mp4" type="video/mp4">
+                Ihr Browser unterstützt dieses Video nicht.
+            </video>
         </section>
 
-        <section id="impressum">
-            <h2>Impressum</h2>
-            <p>
-                Verantwortlich für den Inhalt dieser Webseite:<br>
-                Markus Ernst<br>
-                Willy-Brandt-Straße 11<br>
-                64354 Reinheim<br>
-                <strong>Kontakt:</strong> <a href="mailto:markus.ernst493@gmail.com">markus.ernst493@gmail.com</a>
-            </p>
-            <p>
-                Diese Webseite dient ausschließlich privaten Zwecken und wird nicht kommerziell betrieben. Sollten Sie Fragen oder Anregungen haben, können Sie mich jederzeit kontaktieren.
-            </p>
+        <section id="profile">
+            <h2>Profil Video</h2>
+            <video width="100%" controls autoplay loop>
+                <source src="profil.mp4" type="video/mp4">
+                Ihr Browser unterstützt dieses Video nicht.
+            </video>
         </section>
 
-        <section id="datenschutz">
-            <h2>Datenschutzerklärung</h2>
-            <p>
-                Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Webseite speichert keine personenbezogenen Daten ohne Ihre Zustimmung.
-                Sollten Sie weitere Fragen zum Thema Datenschutz haben, können Sie mich unter folgender Adresse erreichen: <a href="mailto:markus.ernst493@gmail.com">markus.ernst493@gmail.com</a>.
-            </p>
-            <p>
-                Es gelten die Bestimmungen der Datenschutz-Grundverordnung (DSGVO). Für weitere Informationen können Sie mich jederzeit kontaktieren.
-            </p>
+        <section id="zusatz-videos">
+            <h2>Weitere Videos</h2>
+            <img src="video1.gif" alt="Video 1" style="width: 100%; max-height: 400px;">
+            <img src="video2.gif" alt="Video 2" style="width: 100%; max-height: 400px;">
+            <video width="100%" controls autoplay loop>
+                <source src="video3.mp4" type="video/mp4">
+                Ihr Browser unterstützt dieses Video nicht.
+            </video>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Markus Ernst - Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        // Pop-up nach 9 Sekunden ausblenden
+        setTimeout(() => {
+            const popup = document.getElementById('popup');
+            if (popup) {
+                popup.style.display = 'none';
+            }
+        }, 9000);
+
+        // Hintergrund-Diashow
+        const backgrounds = [
+            'hintergrund1.png',
+            'hintergrund2.png',
+            'hintergrund3.png',
+            'hintergrund4.png',
+            'hintergrund5.png',
+            'hintergrund6.png'
+        ];
+
+        let index = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+            document.body.style.backgroundSize = 'contain';
+            document.body.style.backgroundPosition = 'center';
+            document.body.style.backgroundRepeat = 'no-repeat';
+            index = (index + 1) % backgrounds.length;
+        }
+
+        // Hintergrundbild alle 5 Sekunden ändern
+        setInterval(changeBackground, 5000);
+    </script>
 </body>
 </html>
