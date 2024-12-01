@@ -35,7 +35,25 @@
             background-repeat: no-repeat;
             color: #333;
             line-height: 1.8;
-            transition: background-image 1s ease-in-out;
+            transition: background-image 1s ease-in-out;<script>
+    // Pop-up nach 9 Sekunden ausblenden
+    setTimeout(() => {
+        const popup = document.getElementById('popup'); // Pop-up-Element finden
+        if (popup) {
+            popup.style.display = 'none'; // Pop-up ausblenden
+        }
+    }, 9000); // Zeit in Millisekunden (9000 ms = 9 Sekunden)
+</script>
+<script>
+    // Pop-up nach 9 Sekunden ausblenden
+    setTimeout(() => {
+        const popup = document.getElementById('popup'); // Pop-up-Element finden
+        if (popup) {
+            popup.style.display = 'none'; // Pop-up ausblenden
+        }
+    }, 9000); // Zeit in Millisekunden (9000 ms = 9 Sekunden)
+</script>
+
         }
         header {
             text-align: center;
