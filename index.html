@@ -161,6 +161,53 @@
     <footer>
         <p>&copy; 2024 Markus Ernst - Alle Rechte vorbehalten.</p>
     </footer>
+<section id="vorseite">
+    <h2>Vorseite</h2>
+    <iframe id="youtube-video" 
+            width="100%" 
+            height="500" 
+            src="https://www.youtube.com/embed/Bg-UE0pA8GY?autoplay=1&mute=1&controls=0&rel=0&showinfo=0&modestbranding=1&enablejsapi=1" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen 
+            style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
+    </iframe>
+</section>
+
+<script>
+    // YouTube API laden, um die Weiterleitung nach Ende des Videos zu steuern
+    function onYouTubeIframeAPIReady() {
+        const player = new YT.Player('youtube-video', {
+            events: {
+                'onStateChange': function(event) {
+                    if (event.data === YT.PlayerState.ENDED) {
+                        // Weiterleitung zur Galerie-Seite nach dem Ende des Videos
+                        document.getElementById('vorseite').style.display = 'none';
+                        document.getElementById('hauptseite').style.display = 'block';
+                        document.getElementById('hauptseite').scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
+        });
+    }
+
+    // YouTube Iframe API Skript dynamisch laden
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+<section id="hauptseite" style="display: none;">
+    <h2>Galerie</h2>
+
+    <!-- Beispiel für Videos in der Galerie -->
+    <div style="margin-bottom: 20px;">
+        <video autoplay loop muted playsinline width="100%" height="auto" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <source src="diashow3.mp4" type="video/mp4">
+            Ihr Browser unterstützt dieses Videoformat nicht.
+        </video>
+    </div>
+</section>
 </body>
 <script>
     // Array der Hintergrundbilder
