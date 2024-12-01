@@ -265,31 +265,6 @@
     const firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 </script>
-# Erneutes Arbeiten mit der neu hochgeladenen Datei
-
-# Extraktionspfad für die hochgeladene Datei
-uploaded_file_path_new = "/mnt/data/Markus-Ernst-Webseite-main (3).zip"
-extract_path_new = "/mnt/data/Markus-Ernst-Webseite-extracted-new"
-
-# Extrahieren der ZIP-Datei
-with zipfile.ZipFile(uploaded_file_path_new, 'r') as zip_ref:
-    zip_ref.extractall(extract_path_new)
-
-# Pfad zur Haupt-HTML-Datei in der extrahierten Struktur (angenommen index.html)
-main_html_path_new = os.path.join(extract_path_new, "index.html")
-
-# Änderungen vornehmen: Korrektur der Hintergrund-Diashow (etwas kleiner) und Entfernen von Duplikaten
-with open(main_html_path_new, "r") as file:
-    html_content_new = file.read()
-
-# Änderungen am HTML-Inhalt
-updated_html_content_new = html_content_new.replace(
-    "background-size: cover;", 
-    "background-size: contain;"  # Hintergrundbilder proportional kleiner
-).replace(
-    '<iframe id="diashow-video-2"', 
-    '<!-- Removed Duplicate Video -->\n<!-- <iframe id="diashow-video-2"'
-)
 
 # Aktualisierte Datei speichern
 updated_html_path_new = "/mnt/data/Markus-Ernst-Webseite-updated-final.html"
