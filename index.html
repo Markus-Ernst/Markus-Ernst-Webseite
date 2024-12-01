@@ -243,3 +243,29 @@
             style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
     </iframe>
 </section>
+<script>
+    // API bereitstellen
+    function onYouTubeIframeAPIReady() {
+        const player = new YT.Player('youtube-video', {
+            events: {
+                'onReady': function(event) {
+                    event.target.unMute(); // Ton aktivieren
+                },
+                'onStateChange': function(event) {
+                    if (event.data === YT.PlayerState.ENDED) {
+                        // Weiterleitung nach Videoende
+                        document.getElementById('vorseite').style.display = 'none';
+                        document.getElementById('hauptseite').style.display = 'block';
+                        document.getElementById('hauptseite').scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            }
+        });
+    }
+
+    // Lade YouTube Iframe API
+    const tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
