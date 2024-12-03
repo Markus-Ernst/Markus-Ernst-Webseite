@@ -271,12 +271,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Anzeige mit Diashow-Hintergrund</title>
   <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video mit Diashow-Hintergrund</title>
+  <style>
     /* Grundlegendes Styling */
     body, html {
       margin: 0;
       padding: 0;
       height: 100%;
       overflow: hidden;
+      font-family: Arial, sans-serif;
     }
 
     /* Diashow Container */
@@ -312,7 +320,7 @@
     .slideshow-container div:nth-child(3) { animation-delay: 10s; background-image: url('hintergrund2.png'); }
     .slideshow-container div:nth-child(4) { animation-delay: 15s; background-image: url('hintergrund3.png'); }
 
-    /* Video Anzeige */
+    /* Video Container */
     .video-container {
       position: relative;
       z-index: 1; /* Video über dem Hintergrund */
@@ -347,25 +355,5 @@
       allowfullscreen>
     </iframe>
   </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video-Einbettung</title>
-</head>
-<body>
-  <h1>Mein YouTube-Video</h1>
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/51t3fTR1jd8" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
 </body>
 </html>
